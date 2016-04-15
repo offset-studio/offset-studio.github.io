@@ -1,0 +1,36 @@
+{
+  "name": "offset",
+  "version": "1.0.0",
+  "description": "Offset Studio",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/offset-studio/offset-studio.github.io.git"
+  },
+  "keywords": [
+    "Offset",
+    "Studio"
+  ],
+  "author": "Russell Goldenberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/offset-studio/offset-studio.github.io/issues"
+  },
+  "homepage": "https://github.com/offset-studio/offset-studio.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-hb": "^5.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.3.1",
+    "gulp-util": "^3.0.7",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5"
+  }
+}
