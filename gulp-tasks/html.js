@@ -8,36 +8,27 @@ const report  		= require('../report-error.js')
 // const browserSync   = require('browser-sync')
 
 // const svgPath = process.cwd() + '/svg/'
-
-gulp.task('html-dev', () => {
-	const hbStream = hb()
+const createHandlebarsStream = () => 
+	hb()
 		.partials('./home/html/partials/**/*.hbs')
 		.helpers('./home/html/helpers/*.js')
 		.data('./home/data/**/*.{js,json}')
-		.data({timestamp: Date.now()})
 
+gulp.task('html-dev', () => {
+	const hbStream = createHandlebarsStream()
 
 	return gulp.src('./home/html/index.hbs')
 		.pipe(plumber({ errorHandler: report}))
 		.pipe(hbStream)
-		// .pipe(include({ basepath: svgPath }))
 		.pipe(rename('index.html'))
 		.pipe(gulp.dest('dev'))
-		// .pipe(browserSync.reload({stream: true}))
 })
 
 gulp.task('html-prod', () => {
-	const hbStream = hb()
-		.partials('./home/html/partials/**/*.hbs')
-		.helpers('./home/html/helpers/*.js')
-		.data('./home/data/**/*.{js,json}')
-		.data({timestamp: Date.now()})
-
+	const hbStream = createHandlebarsStream()
 
 	return gulp.src('./home/html/index.hbs')
-		.pipe(plumber({ errorHandler: report}))
 		.pipe(hbStream)
-		// .pipe(include({ basepath: svgPath }))
 		.pipe(rename('index.html'))
-		.pipe(gulp.dest(''))
+		.pipe(gulp.dest('.tmp'))
 })

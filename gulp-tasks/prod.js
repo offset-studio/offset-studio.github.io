@@ -1,12 +1,12 @@
 const gulp        = require('gulp')
 const runSequence = require('run-sequence')
 
-gulp.task('dev', () => {
+gulp.task('prod', () => {
 	runSequence(
-		'clean-dev',
-		'css-dev',
-		'js-dev',
-		'html-dev',
-		'browser-sync'
+		'clean-prod',
+		'css-prod',
+		'js-prod',
+		'html-prod',
+		'smoosh-prod'
 	)
 })

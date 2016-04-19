@@ -31,26 +31,22 @@
 	<meta property='og:description' content='' />
 	<meta property='og:url' content='' />
 	<meta property='og:image' content='' />
-
+	<!-- smoosh -->
 	<link rel='stylesheet' href='main.css' />
+	<!-- endsmoosh -->
 </head>
 
 <body>
 	<main class='content'>
-		<header>
-			<h1><a href='/'>Offset</a></h1>
-
-			<nav>
-
-				<ol>
-					<li><a href=''>Work</a></li>
-					<li><a href=''>About</a></li>
-					<li><a href=''>Ethos</a></li>
-				</ol>
-
-			</nav>
-
-		</header>
+		{{> header}}
+		{{> intro}}
+		{{> work}}
+		{{> ethos}}
+		{{> about}}
+		{{> footer}}
 	</main>
+	<!-- smoosh -->
+	<script src='bundle.js'></script>
+	<!-- endsmoosh -->
 </body>
 </html>
